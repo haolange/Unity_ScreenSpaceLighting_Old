@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: e5720f3e4091d5649966a31a0c9adc84
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - GTSO_LUT: {fileID: 8600000, guid: 3259ff3bea45efe4796e750ed7cb244a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

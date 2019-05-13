@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c1e89186055c51843b2d51bf9ad026ed
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SSGi_Shader: {fileID: 4800000, guid: 189b5a0299160974db35a8589c338bb8, type: 3}
+  - BlueNoise_LUT: {fileID: 2800000, guid: be1a86331b04ef047b7dc25e87ae8982, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

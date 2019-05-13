@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 43d4379f6f2180e4d8f347761badc9ce
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _PreintegratedLUT: {fileID: 2800000, guid: a39cb4814e9b26b4b8282706720b7a27, type: 3}
+  - _NomralTexture: {instanceID: 0}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
