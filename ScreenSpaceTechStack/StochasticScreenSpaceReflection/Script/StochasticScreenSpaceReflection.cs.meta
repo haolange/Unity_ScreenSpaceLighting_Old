@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2529b19ec8088594985082181a497bc1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BlueNoise_LUT: {fileID: 2800000, guid: be1a86331b04ef047b7dc25e87ae8982, type: 3}
+  - PreintegratedGF_LUT: {fileID: 2800000, guid: a39cb4814e9b26b4b8282706720b7a27,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
