@@ -2,7 +2,7 @@
 #define _SSTrace_IBRARY_
 
 #include "UnityStandardBRDF.cginc"
-#include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+#include "Include_HLSL.hlsl"
 
 inline half GetScreenFadeBord(half2 pos, half value)
 {

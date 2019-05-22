@@ -32,7 +32,7 @@
 
             #define SHOULD_SAMPLE_SH (defined (LIGHTMAP_OFF) && defined (DYNAMICLIGHTMAP_OFF))
 
-            #include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+            #include "Assets/ScreenSpaceTechStack/Common/Shaders/Resources/Include_HLSL.hlsl"
             #include "UnityCG.cginc"
             #include "AutoLight.cginc"
             #include "Lighting.cginc"

@@ -1,5 +1,5 @@
 #include "UnityCG.cginc"
-#include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+#include "Assets/ScreenSpaceTechStack/Common/Shaders/Resources/Include_HLSL.hlsl"
 
 #define BLUR_RADIUS 12
 

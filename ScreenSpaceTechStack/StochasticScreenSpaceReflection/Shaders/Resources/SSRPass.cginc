@@ -1,5 +1,5 @@
 #include "UnityCG.cginc"
-#include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+#include "Assets/ScreenSpaceTechStack/Common/Shaders/Resources/Include_HLSL.hlsl"
 
 #ifndef HiZ_Method_Advanced
     #define HiZ_Method_Advanced 0
