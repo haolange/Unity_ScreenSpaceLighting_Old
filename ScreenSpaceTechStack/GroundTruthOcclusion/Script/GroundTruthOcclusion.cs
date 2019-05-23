@@ -92,8 +92,27 @@ public class GroundTruthOcclusion : MonoBehaviour {
 
     //////BaseProperty
     private Camera RenderCamera;
-    private Material GTAOMaterial;
-    private CommandBuffer GTAOBuffer = null;
+    private Material GTAOMaterial_;
+    private Material GTAOMaterial
+    {
+        get
+        {
+            if (GTAOMaterial_ == null) GTAOMaterial_ = new Material(Shader.Find("Hidden/GroundTruthAmbientOcclusion"));
+            return GTAOMaterial_;
+        }
+    }
+    private CommandBuffer GTAOBuffer_ = null;
+    private CommandBuffer GTAOBuffer
+    {
+        get
+        {
+            if (GTAOBuffer_ == null) {
+                GTAOBuffer_ = new CommandBuffer();
+                GTAOBuffer_.name = "GroundTruthAmbientOcclusion";
+            }
+            return GTAOBuffer_;
+        }
+    }
 
 
     //////Transform property 
@@ -159,13 +178,10 @@ public class GroundTruthOcclusion : MonoBehaviour {
     void Awake()
     {
         RenderCamera = gameObject.GetComponent<Camera>();
-        GTAOMaterial = new Material(Shader.Find("Hidden/GroundTruthAmbientOcclusion"));
     }
 
     void OnEnable()
     {
-        GTAOBuffer = new CommandBuffer();
-        GTAOBuffer.name = "GroundTruthAmbientOcclusion";
         RenderCamera.AddCommandBuffer(CameraEvent.BeforeLighting, GTAOBuffer);
     }
 
