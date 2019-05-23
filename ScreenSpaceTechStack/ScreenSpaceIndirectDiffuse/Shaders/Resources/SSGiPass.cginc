@@ -1,5 +1,5 @@
 #include "UnityCG.cginc"
-#include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+#include "../../../Common/Shaders/Resources/Include_HLSL.hlsl"
 
 #ifndef AA_Filter
     #define AA_Filter 1

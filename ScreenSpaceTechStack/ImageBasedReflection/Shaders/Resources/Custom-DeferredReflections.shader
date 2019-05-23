@@ -22,7 +22,7 @@ CGPROGRAM
 #include "UnityDeferredLibrary.cginc"
 #include "UnityStandardUtils.cginc"
 #include "CustomGBuffer.cginc"
-#include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+#include "Assets/ScreenSpaceTechStack/Common/Shaders/Resources/Include_HLSL.hlsl"
 #include "UnityPBSLighting.cginc"
 
 sampler2D _PreintegratedLUT;

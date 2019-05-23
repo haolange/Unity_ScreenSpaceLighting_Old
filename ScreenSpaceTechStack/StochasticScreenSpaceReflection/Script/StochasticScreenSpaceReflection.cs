@@ -81,14 +81,14 @@ public class StochasticScreenSpaceReflection : MonoBehaviour
     [SerializeField]
     int HiZ_StopLevel = 0;
 
-    
+
 
     [Header("Linear_Trace Property")]
 
     [SerializeField]
     bool Linear_TraceBehind = false;
 
-    
+
     [SerializeField]
     bool Linear_TowardRay = true;
 
@@ -139,7 +139,7 @@ public class StochasticScreenSpaceReflection : MonoBehaviour
 
     [SerializeField]
     bool Denoise = true;
-    
+
 
     [SerializeField]
     bool RunTimeDebugMod = true;
@@ -149,7 +149,7 @@ public class StochasticScreenSpaceReflection : MonoBehaviour
     DebugPass DeBugPass = DebugPass.SSRColor;
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private static int RenderPass_HiZ_Depth = 0;
     private static int RenderPass_Linear2D_SingelSPP = 1;
     private static int RenderPass_HiZ3D_SingelSpp = 2;
@@ -161,8 +161,29 @@ public class StochasticScreenSpaceReflection : MonoBehaviour
     private static int RenderPass_Temporalfilter_MultiSpp = 8;
 
     private Camera RenderCamera;
-    private CommandBuffer ScreenSpaceReflectionBuffer = null;
-    private Material StochasticScreenSpaceReflectionMaterial;
+
+    private CommandBuffer ScreenSpaceReflectionBuffer_ = null;
+
+    private CommandBuffer ScreenSpaceReflectionBuffer
+    {
+        get
+        {
+            if (ScreenSpaceReflectionBuffer_ == null) {
+                ScreenSpaceReflectionBuffer_ = new CommandBuffer();
+                ScreenSpaceReflectionBuffer_.name = "StochasticScreenSpaceReflection";
+            }
+            return ScreenSpaceReflectionBuffer_;
+        }
+    }
+    private Material StochasticScreenSpaceReflectionMaterial_ = null;
+    private Material StochasticScreenSpaceReflectionMaterial
+    {
+        get
+        {
+            if (StochasticScreenSpaceReflectionMaterial_ == null) StochasticScreenSpaceReflectionMaterial_ = new Material(Shader.Find("Hidden/StochasticScreenSpaceReflection"));
+            return StochasticScreenSpaceReflectionMaterial_;
+        }
+    }
 
     private Vector2 RandomSampler = new Vector2(1, 1);
     private Vector2 CameraSize;
@@ -237,14 +258,6 @@ public class StochasticScreenSpaceReflection : MonoBehaviour
     void Awake()
     {
         RenderCamera = gameObject.GetComponent<Camera>();
-        StochasticScreenSpaceReflectionMaterial = new Material(Shader.Find("Hidden/StochasticScreenSpaceReflection"));
-
-        //////Install RenderBuffer//////
-        if (ScreenSpaceReflectionBuffer == null) 
-        {
-            ScreenSpaceReflectionBuffer = new CommandBuffer();
-            ScreenSpaceReflectionBuffer.name = "StochasticScreenSpaceReflection";
-        }
 
         //////Update don't need Tick Refresh Variable//////
         SSR_UpdateVariable();

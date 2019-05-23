@@ -4,7 +4,7 @@ Shader "GTAO/GroundTruthSpecularOcclusion_LookUpTable"
 	CGINCLUDE
 		#include "UnityCG.cginc"
 		#include "UnityCustomRenderTexture.cginc"
-		#include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+		#include "../../../../Common/Shaders/Resources/Include_HLSL.hlsl"
 
 		float IntegrateGTSO(float alphaV, float beta, float Roughness, float thetaRef)
 		{

@@ -5,7 +5,7 @@
 	CGINCLUDE
 		#include "UnityCG.cginc"
 		#include "UnityCustomRenderTexture.cginc"
-		#include "Assets/TP/CGBull/Common/Shaders/Resources/Include_HLSL.hlsl"
+		#include "Assets/ScreenSpaceTechStack/Common/Shaders/Resources/Include_HLSL.hlsl"
 
 //////////////PBR Integrated_GFD
 		half3 frag_Integrated_GFD (v2f_customrendertexture i) : SV_Target {
