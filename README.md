@@ -36,7 +36,7 @@ SSGI only
 
 [More Pictures](./Pics/SSGI)
 
-### SSAO
+### SSAO(GTAO)
 
 ![Uinty_CustomSSAO_01](./Pics/SSAO/Uinty_CustomSSAO_01.png)
 
